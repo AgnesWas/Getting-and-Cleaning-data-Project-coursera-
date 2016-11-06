@@ -96,3 +96,5 @@ XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 * SITTING  (value  4 ): subject was sitting during the test
 * STANDING  (value  5 ): subject was standing during the test
 * LAYING  (value  6 ): subject was laying down during the test
+
+##Work performed to clean up the data;* Preparation in advance-> download the plyr package* Reading the Train and Test data (and feature documents)* Assign names to the columns (make sure column names in Train and Test data are similar)* Merge Train data and merge Test data apart from each other (into two datasets)* then, Merge Train and Test data into one dataset* Create Vector for further use* Extract the measurements on the mean and standard deviation for each measurement* Use descriptive activity names to name the activities in the data set* Appropriately label the data set with descriptive variable names* From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
