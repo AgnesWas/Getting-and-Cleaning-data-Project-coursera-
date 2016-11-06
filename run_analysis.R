@@ -45,7 +45,7 @@ colNames<-colnames(TrainTest)
 
 MeanStdev <-TrainTest[,grepl("mean|std|subjId|actId",colnames(TrainTest))]
 
-## Assignment part 3; #Uses descriptive activity names to name the activities in the data set
+## Assignment part 3; Uses descriptive activity names to name the activities in the data set
 
 MeanStdev <- join(MeanStdev, ActivityLabel, by = "actId", match = "first") 
 
@@ -65,7 +65,7 @@ names(MeanStdev)<-gsub("Mag", "Magnitude", names(MeanStdev))
 # If the name contains 'BodyBody','Bodybody' is replaced by 'Body'
 names(MeanStdev)<-gsub("BodyBody", "Body", names(MeanStdev))
 
-## Assignment part 5; 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## Assignment part 5; From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Dataaverage<- ddply(MeanStdev, c("subjId","actId"), numcolwise(mean))
 
